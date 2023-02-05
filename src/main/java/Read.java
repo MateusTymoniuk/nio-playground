@@ -19,7 +19,7 @@ public class Read {
                      Files.newByteChannel(path, StandardOpenOption.READ)) {
             while (true) {
                 Scanner scanner = new Scanner(System.in);
-                System.out.println("Press n to read next byte and e to exit");
+                System.out.println("Press n to read next " + Constants.BUFFER_SIZE + " bytes or e to exit");
                 userInput = scanner.nextLine();
 
                 if ("e".equals(userInput)) break;

@@ -25,10 +25,8 @@ public class Write {
                      Files.newByteChannel(path, StandardOpenOption.APPEND)) {
             while (true) {
                 Scanner scanner = new Scanner(System.in);
-                System.out.println("Press n to read next byte and e to exit");
+                System.out.println("Type the next line (chars beyond the length of 10 will be cut):");
                 userInput = scanner.nextLine();
-
-                if ("e".equals(userInput)) break;
 
                 String transformedString;
 
